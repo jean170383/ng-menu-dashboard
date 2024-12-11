@@ -24,6 +24,7 @@ export class TodoComponent {
   @Input() even!:boolean;
   @Output() onClickIcon=new EventEmitter<NTodo.TodoData>();
 
+  //Prioridad
   get priority():string{
     switch(this.todoData.priority){
       case NTodo.Priority.LOW:
@@ -35,10 +36,11 @@ export class TodoComponent {
 
     }
   }
-
+  //Progreso
   get progress(){
     return this.todoData.progress*100;
   }
+  //Rango
   get range(){
     if(this.progress>=0 && this.progress <= NTodo.Range.LOW){
       return NTodo.RangeText.LOW;
