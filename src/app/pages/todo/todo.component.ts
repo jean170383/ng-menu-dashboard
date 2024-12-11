@@ -45,7 +45,6 @@ export class TodoComponent {
     }else if(this.progress>NTodo.Range.LOW && this.progress <= NTodo.Range.MEDIUM){
       return NTodo.RangeText.MEDIUM;
     }
-    console.log('prueba');
     return NTodo.RangeText.HIGH;
   }
 
